@@ -3,7 +3,6 @@ import styled from "styled-components"
 import MileStone from "./MileStone"
 import SkillTree from "./SkillTree"
 import Summary from "./Summary"
-import MaxWidth from "./MaxWidth"
 
 interface Props {
   description: string
@@ -29,16 +28,14 @@ const Title = styled.h3`
 `
 
 const Main: FC<Props> = ({ description, skills, milestone }) => (
-  <MaxWidth>
-    <Section>
-      <Title>SUMMARY</Title>
-      <Summary>{description}</Summary>
-      <Title>MILESTONE</Title>
-      <MileStone items={milestone} />
-      <Title>SKILL TREE</Title>
-      <SkillTree items={skills} />
-    </Section>
-  </MaxWidth>
+  <Section>
+    <Title>SUMMARY</Title>
+    <Summary>{description}</Summary>
+    <Title>MILESTONE</Title>
+    <MileStone items={milestone} />
+    <Title>SKILL TREE</Title>
+    <SkillTree items={skills} />
+  </Section>
 )
 
 export default Main

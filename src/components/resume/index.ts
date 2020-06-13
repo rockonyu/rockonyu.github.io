@@ -1,0 +1,6 @@
+export { default as Footer } from "./Footer"
+export { default as Main } from "./Main"
+export { default as MileStone } from "./MileStone"
+export { default as SkillTree } from "./SkillTree"
+export { default as Summary } from "./Summary"
+export { default as resume } from "./resume.json"

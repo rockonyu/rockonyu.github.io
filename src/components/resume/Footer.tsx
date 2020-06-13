@@ -1,8 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import MaxWidth from "./MaxWidth"
 
-const Section = styled.div`
+const MaxWidth = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1em;
+`
+
+const Section = styled.footer`
   background-color: #ececec;
   padding-bottom: 1em;
 `
