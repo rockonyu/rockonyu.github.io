@@ -1,8 +1,7 @@
 import React, { FC } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import MileStone from "./MileStone"
 import SkillTree from "./SkillTree"
-import Summary from "./Summary"
 
 interface Props {
   description: string
@@ -25,6 +24,11 @@ const Title = styled.h3`
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
   letter-spacing: 5px;
+`
+
+const Summary = styled.p`
+  line-height: 2;
+  white-space: pre-line;
 `
 
 const Main: FC<Props> = ({ description, skills, milestone }) => (

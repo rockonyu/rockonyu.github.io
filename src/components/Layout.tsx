@@ -7,14 +7,23 @@
 
 import React, { FC } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Header from "./Header"
-import "./layout.css"
+import { Header, Footer } from "./"
+import styled from "@emotion/styled"
+import { space, maxWidth, minHeight } from "styled-system"
+import { Global, css } from "@emotion/core"
 
 type Props = {
   title?: string
+  footer?: JSX.Element
 }
 
-const Layout: FC<Props> = ({ title, children }) => {
+const Container = styled.section`
+  ${space}
+  ${maxWidth}
+  ${minHeight}
+`
+
+const Layout: FC<Props> = ({ title, children, footer }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,16 +36,18 @@ const Layout: FC<Props> = ({ title, children }) => {
 
   return (
     <>
+      <Global
+        styles={css`
+          body {
+            font-size: 115%;
+          }
+        `}
+      />
       <Header siteTitle={title || data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Container m="0 auto" maxWidth={960} minHeight="80vh" p="0 1rem 1.5rem">
         <main>{children}</main>
-      </div>
+      </Container>
+      <Footer>{footer}</Footer>
     </>
   )
 }

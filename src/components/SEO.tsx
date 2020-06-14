@@ -16,7 +16,12 @@ type Props = {
   meta?: Array<JSX.IntrinsicElements["meta"]>
 }
 
-const SEO: FC<Props> = ({ description, lang, meta = [], title }) => {
+const SEO: FC<Props> = ({
+  description = "",
+  lang = "en",
+  meta = [],
+  title,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -77,18 +82,5 @@ const SEO: FC<Props> = ({ description, lang, meta = [], title }) => {
     />
   )
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-// SEO.propTypes = {
-//   description: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired,
-// }
 
 export default SEO

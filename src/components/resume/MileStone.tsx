@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 interface Props {
   items: Array<{
@@ -43,6 +43,7 @@ const Projects = styled.ul`
   margin-top: 0.5em;
   display: inline-block;
   list-style: none;
+  padding-left: 0;
   & > li {
     display: inline-block;
   }
