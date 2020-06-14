@@ -1,8 +1,9 @@
 import React, { FC } from "react"
 import { PageProps, Link, graphql } from "gatsby"
+import { Heading } from "theme-ui"
 import { Layout, Image, SEO } from "../components"
 
-type Data = {
+export type Data = {
   site: {
     siteMetadata: {
       title: string
@@ -43,17 +44,11 @@ const IndexPage: FC<PageProps<Data>> = ({ data }) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3
-                style={
-                  {
-                    // marginBottom: rhythm(1 / 4),
-                  }
-                }
-              >
+              <Heading as="h3" mb={1}>
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </h3>
+              </Heading>
               <small>{node.frontmatter.date}</small>
             </header>
             <section>
@@ -87,7 +82,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY/M/D")
             title
             description
           }

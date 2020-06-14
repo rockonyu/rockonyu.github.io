@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Styled, Divider } from "theme-ui"
 import { Layout, SEO } from "../components"
 
 // @ts-ignore
@@ -16,13 +17,13 @@ const BlogPostTemplate = ({ data, pageContext }) => {
       />
       <article>
         <header>
-          <h1
-            style={{
+          <Styled.h1
+            css={{
               marginBottom: 0,
             }}
           >
             {post.frontmatter.title}
-          </h1>
+          </Styled.h1>
           <p
             style={{
               display: `block`,
@@ -32,7 +33,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
+        <Divider />
         {/* <footer>by Austin Chang</footer> */}
       </article>
 
@@ -81,7 +82,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY/M/DD")
         description
       }
     }

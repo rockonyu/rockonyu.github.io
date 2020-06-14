@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Austin Chang`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Austin 作為專注在網際網路的軟體工作者，總計約六年網頁開發經驗，使用 React、TypeScript、AngularJS 等技術。對技術發展保持開放態度，持續審視職涯並保持學習，希望與有才華的工作者共同事並應用在實際商用產品。`,
+    author: `張瑀`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/content/posts`,
         name: `posts`,
       },
     },
