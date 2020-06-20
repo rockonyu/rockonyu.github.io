@@ -36,13 +36,7 @@ const Layout: FC<Props> = ({ title, children, footer }) => {
 
   return (
     <>
-      <Global
-        styles={css`
-          body {
-            font-size: 115%;
-          }
-        `}
-      />
+      <Global styles={css``} />
       <Header siteTitle={title || data.site.siteMetadata.title} />
       <Container m="0 auto" maxWidth={960} minHeight="80vh" p="0 1rem 1.5rem">
         <main>{children}</main>
