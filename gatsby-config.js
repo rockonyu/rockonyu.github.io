@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Austin Chang`,
+    title: `DC`,
     description: `Austin 作為專注在網際網路的軟體工作者，總計約六年網頁開發經驗，使用 React、TypeScript、AngularJS 等技術。對技術發展保持開放態度，持續審視職涯並保持學習，希望與有才華的工作者共同事並應用在實際商用產品。`,
     author: `張瑀`,
   },
@@ -32,7 +32,16 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

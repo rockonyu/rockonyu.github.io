@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const Footer: FC = ({ children }) => (
-  <Section backgroundColor="#ececec" p={4}>
+  <Section backgroundColor="#ececec" py={4}>
     <Container maxWidth={960} m="0 auto" p="0 1em">
       {children ? (
         children
