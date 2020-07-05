@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { Heading } from "theme-ui"
-import { Layout, Image, SEO } from "../components"
+import { Heading, Text, Grid } from "theme-ui"
+import { Layout, SEO } from "../components"
 
 export type Data = {
   site: {
@@ -31,36 +31,28 @@ const IndexPage: FC<PageProps<Data>> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi there</h1>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <p>
-        正在努力生成網站內容中，先前往
-        <Link to="/resume/">個人履歷</Link>。
-      </p>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <Heading as="h3" mb={1}>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </Heading>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
+      <Grid gap={4}>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <article key={node.fields.slug}>
+              <header>
+                <Heading as="h2" mb={1}>
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </Heading>
+                <small>{node.frontmatter.date}</small>
+              </header>
+              <Text
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
                 }}
-              />
-            </section>
-          </article>
-        )
-      })}
+              ></Text>
+            </article>
+          )
+        })}
+      </Grid>
     </Layout>
   )
 }

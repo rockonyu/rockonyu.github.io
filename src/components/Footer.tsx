@@ -20,7 +20,8 @@ const Footer: FC = ({ children }) => (
         children
       ) : (
         <>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Written by {` `}
+          <a href="/resume">Austin</a> and built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </>
