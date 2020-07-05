@@ -1,4 +1,4 @@
-import { system as theme } from "@theme-ui/presets"
+import { roboto as theme } from "@theme-ui/presets"
 
 export default {
   ...theme,
