@@ -84,3 +84,10 @@ JavaScript  是由物件、原型、函式與閉包組合而成。
 - 透過事件監聽器  (addEventListener)  為應用程式提供互動功能，且同一元素可以註冊多個事件處置器。
 
 ### 2.4  總結
+
+### 補充參考
+
+- [Inside look at modern web browser](https://developers.google.com/web/updates/2018/09/inside-browser-part1)
+- [JavaScript Info](https://javascript.info/)
+- [阿福的筆記](https://www.notion.so/Chapter2-126e9aaf8bf142fb8e2f4a6e38d431c8)
+- [阿寬的筆記](https://www.notion.so/CH2-24f99223addb4b489dbfc54b9faac3d4)

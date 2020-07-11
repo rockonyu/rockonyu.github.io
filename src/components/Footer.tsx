@@ -21,7 +21,7 @@ const Footer: FC = ({ children }) => (
       ) : (
         <>
           © {new Date().getFullYear()}, Written by {` `}
-          <a href="/resume">Austin</a> and built with
+          <a href="/resume">Austin Chang</a> and built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </>
