@@ -52,10 +52,10 @@ const IndexPage: FC<PageProps<Data>> = () => {
       </Hero>
       <Navbar>
         <li>
-          <Link href="https://rockonyu.github.io/resume/">個人履歷</Link>
+          <Link href="https://rockonyu.github.io/posts/">筆記</Link>
         </li>
         <li>
-          <Link href="https://rockonyu.github.io/posts/">筆記</Link>
+          <Link href="https://rockonyu.github.io/resume/">個人履歷</Link>
         </li>
       </Navbar>
     </Container>
