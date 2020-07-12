@@ -1,7 +1,7 @@
 import React, { FC } from "react"
-import { PageProps, Link, graphql } from "gatsby"
-import { Heading, Text, Grid } from "theme-ui"
-import { Layout, SEO } from "../components"
+import { PageProps, graphql } from "gatsby"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 export type Data = {
   site: {
@@ -9,51 +9,56 @@ export type Data = {
       title: string
     }
   }
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string
-        frontmatter: {
-          title: string
-          date: string
-          description: string
-        }
-        fields: {
-          slug: string
-        }
-      }
-    }[]
-  }
 }
 
-const IndexPage: FC<PageProps<Data>> = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
+const Container = styled.section`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+`
+
+const Hero = styled.main`
+  color: white;
+  font-size: 3em;
+  background-color: #2f393b;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Navbar = styled.ul`
+  list-style-type: none;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2em;
+`
+
+const Link = styled.a`
+  color: #2f393b;
+  text-decoration: none;
+`
+
+const IndexPage: FC<PageProps<Data>> = () => {
   return (
-    <Layout>
-      <SEO title="Home" />
-      <Grid gap={4}>
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <article key={node.fields.slug}>
-              <header>
-                <Heading as="h2" mb={1}>
-                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                    {title}
-                  </Link>
-                </Heading>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <Text
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              ></Text>
-            </article>
-          )
-        })}
-      </Grid>
-    </Layout>
+    <Container>
+      <Hero>
+        <p css={{ marginBottom: 0 }}>Austin Chang 張 瑀</p>
+        <small>JS Developer</small>
+      </Hero>
+      <Navbar>
+        <li>
+          <Link href="https://rockonyu.github.io/resume/">個人履歷</Link>
+        </li>
+        <li>
+          <Link href="https://rockonyu.github.io/posts/">筆記</Link>
+        </li>
+      </Navbar>
+    </Container>
   )
 }
 
@@ -64,21 +69,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "YYYY/M/D")
-            title
-            description
-          }
-        }
       }
     }
   }
