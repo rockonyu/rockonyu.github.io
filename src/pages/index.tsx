@@ -47,8 +47,8 @@ const IndexPage: FC<PageProps<Data>> = () => {
   return (
     <Container>
       <Hero>
-        <p css={{ marginBottom: 0 }}>Austin Chang 張 瑀</p>
-        <small>JS Developer</small>
+        <p css={{ marginBottom: 0 }}>Austin Chang</p>
+        <small># JS Developer</small>
       </Hero>
       <Navbar>
         <li>
