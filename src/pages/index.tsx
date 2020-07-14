@@ -1,7 +1,7 @@
-import React, { FC } from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { FC } from "react"
 import { PageProps, graphql } from "gatsby"
-import styled from "@emotion/styled"
-import { css } from "@emotion/core"
 
 export type Data = {
   site: {
@@ -11,55 +11,61 @@ export type Data = {
   }
 }
 
-const Container = styled.section`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  height: -webkit-fill-available;
-  flex-direction: column;
-`
-
-const Hero = styled.main`
-  color: white;
-  font-size: 3em;
-  background-color: #2f393b;
-  height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Navbar = styled.ul`
-  list-style-type: none;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 1.2em;
-`
-
-const Link = styled.a`
-  color: #2f393b;
-  text-decoration: none;
-`
+const Link: FC<{ href: string }> = ({ children, href }) => (
+  <a
+    sx={{
+      color: "#2f393b",
+      textDecoration: "none",
+    }}
+    href={href}
+  >
+    {children}
+  </a>
+)
 
 const IndexPage: FC<PageProps<Data>> = () => {
   return (
-    <Container>
-      <Hero>
-        <p css={{ marginBottom: 0 }}>Austin Chang</p>
+    <section
+      sx={{
+        display: "flex",
+        width: "100vw",
+        height: ["100vh", "-webkit-fill-available"],
+        flexDirection: "column",
+      }}
+    >
+      <main
+        sx={{
+          color: "white",
+          fontSize: "3em",
+          backgroundColor: "#2f393b",
+          height: "calc(100vh - 100px)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <p sx={{ mb: 0 }}>Austin Chang</p>
         <small># JS Developer</small>
-      </Hero>
-      <Navbar>
+      </main>
+      <ul
+        sx={{
+          listStyleType: "none",
+          display: "flex",
+          flexGrow: 1,
+          alignItems: "center",
+          justifyContent: "space-around",
+          fontSize: "1.2em",
+        }}
+      >
         <li>
           <Link href="https://rockonyu.github.io/posts/">筆記</Link>
         </li>
         <li>
           <Link href="https://rockonyu.github.io/resume/">個人履歷</Link>
         </li>
-      </Navbar>
-    </Container>
+      </ul>
+    </section>
   )
 }
 

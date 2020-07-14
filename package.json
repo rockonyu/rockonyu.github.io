@@ -1,12 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "rockonyu.github.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "自家用的入口站台",
+  "version": "0.0.1",
+  "author": "Austin Chang <drivers_high1937@hotmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
     "@theme-ui/presets": "^0.3.0",
     "gatsby": "^2.22.15",
     "gatsby-image": "^2.4.5",
@@ -24,7 +23,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "styled-system": "^5.1.5",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
