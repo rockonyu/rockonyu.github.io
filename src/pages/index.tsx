@@ -29,7 +29,7 @@ const IndexPage: FC<PageProps<Data>> = () => {
       sx={{
         display: "flex",
         width: "100vw",
-        height: ["100vh", "-webkit-fill-available"],
+        height: ["-webkit-fill-available", "100vh"],
         flexDirection: "column",
       }}
     >
