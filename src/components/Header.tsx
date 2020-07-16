@@ -1,36 +1,42 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import React, { FC } from "react"
 import { Link } from "gatsby"
-import { FC } from "react"
+import { css } from "theme-ui"
 
 type Props = {
   siteTitle: string
 }
 
+const baseStyles = css({
+  color: `white`,
+  "&:hover": {
+    textDecoration: `none`,
+  },
+})
+
 const Header: FC<Props> = ({ siteTitle }) => (
   <header
-    sx={{
-      background: `#2f393b`,
-      marginBottom: `1.45rem`,
+    css={{
+      background: "#2f393b",
+      mb: "1.45rem",
     }}
   >
     <section
-      sx={{
+      css={{
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 sx={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+      <h1 css={{ margin: 0 }}>
+        <Link to="/posts" css={baseStyles}>
           {siteTitle}
         </Link>
+
+        <small css={{ float: "right" }}>
+          <Link to="/tags" css={baseStyles}>
+            Tags
+          </Link>
+        </small>
       </h1>
     </section>
   </header>

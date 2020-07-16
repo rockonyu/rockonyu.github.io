@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { FC } from "react"
-import { PageProps, graphql } from "gatsby"
+import React, { FC } from "react"
+import { PageProps, graphql, Link as GatsbyLink } from "gatsby"
 
 export type Data = {
   site: {
@@ -11,22 +9,22 @@ export type Data = {
   }
 }
 
-const Link: FC<{ href: string }> = ({ children, href }) => (
-  <a
-    sx={{
+const Link: FC<{ to: string }> = ({ children, to }) => (
+  <GatsbyLink
+    css={{
       color: "#2f393b",
       textDecoration: "none",
     }}
-    href={href}
+    to={to}
   >
     {children}
-  </a>
+  </GatsbyLink>
 )
 
 const IndexPage: FC<PageProps<Data>> = () => {
   return (
     <section
-      sx={{
+      css={{
         display: "flex",
         width: "100vw",
         height: ["-webkit-fill-available", "100vh"],
@@ -34,7 +32,7 @@ const IndexPage: FC<PageProps<Data>> = () => {
       }}
     >
       <main
-        sx={{
+        css={{
           color: "white",
           fontSize: "3em",
           backgroundColor: "#2f393b",
@@ -45,11 +43,11 @@ const IndexPage: FC<PageProps<Data>> = () => {
           alignItems: "center",
         }}
       >
-        <p sx={{ mb: 0 }}>Austin Chang</p>
+        <p css={{ mb: 0 }}>Austin Chang</p>
         <small># JS Developer</small>
       </main>
       <ul
-        sx={{
+        css={{
           listStyleType: "none",
           display: "flex",
           flexGrow: 1,
@@ -59,10 +57,10 @@ const IndexPage: FC<PageProps<Data>> = () => {
         }}
       >
         <li>
-          <Link href="https://rockonyu.github.io/posts/">筆記</Link>
+          <Link to="/posts">筆記</Link>
         </li>
         <li>
-          <Link href="https://rockonyu.github.io/resume/">個人履歷</Link>
+          <Link to="/resume">個人履歷</Link>
         </li>
       </ul>
     </section>

@@ -1,16 +1,15 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { FC, Fragment } from "react"
+import React, { FC, Fragment } from "react"
+import { css } from "theme-ui"
 
 const Footer: FC = ({ children }) => (
   <footer
-    sx={{
+    css={css({
       backgroundColor: "#ececec",
       py: 4,
-    }}
+    })}
   >
     <section
-      sx={{
+      css={{
         maxWidth: 960,
         margin: "0 auto",
         padding: "0 1em",
