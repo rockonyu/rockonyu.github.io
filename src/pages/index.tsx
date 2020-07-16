@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import { css } from "theme-ui"
 import { PageProps, graphql, Link as GatsbyLink } from "gatsby"
 
 export type Data = {
@@ -24,12 +25,12 @@ const Link: FC<{ to: string }> = ({ children, to }) => (
 const IndexPage: FC<PageProps<Data>> = () => {
   return (
     <section
-      css={{
+      css={css({
         display: "flex",
         width: "100vw",
         height: ["-webkit-fill-available", "100vh"],
         flexDirection: "column",
-      }}
+      })}
     >
       <main
         css={{
@@ -43,7 +44,7 @@ const IndexPage: FC<PageProps<Data>> = () => {
           alignItems: "center",
         }}
       >
-        <p css={{ mb: 0 }}>Austin Chang</p>
+        <p css={css({ mb: 0 })}>Austin Chang</p>
         <small># JS Developer</small>
       </main>
       <ul
