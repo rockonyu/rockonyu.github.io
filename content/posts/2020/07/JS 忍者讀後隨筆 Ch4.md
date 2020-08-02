@@ -23,26 +23,30 @@ tags: ["JS Ninja"]
 呼叫函式的方式對程式運作有很大的影響，關鍵是 `this` 參數會如何被建立？可以使用四種形式呼叫函式：
 
 #### 作為函式呼叫
-  - 作為函式 `skulk()`
-  - `this` 的值在普通模式下是全域物件 `window`；嚴格模式下是 `undefined`
-  
+
+- 作為函式 `skulk()`
+- `this` 的值在普通模式下是全域物件 `window`；嚴格模式下是 `undefined`
+
 #### 作為方法呼叫
-  - 作為方法 `ninja.skulk()`
-  - `this` 的值指向 `ninja` 物件
-  
+
+- 作為方法 `ninja.skulk()`
+- `this` 的值指向 `ninja` 物件
+
 #### 作為建構器呼叫
-  - 作為建構函式 `new Ninja()`
-  - 使用 `new` 關鍵字會建立一個空的新物件，並以它作為函式背景空間 `this`
-  - 建構式回傳物件會被視為整個 `new` 表達式的回傳值
-  - 建構函式回傳 primitive value 會被忽略，返回原先建立的物件
-  - 建構器會使用大寫字母開頭
-  
+
+- 作為建構函式 `new Ninja()`
+- 使用 `new` 關鍵字會建立一個空的新物件，並以它作為函式背景空間 `this`
+- 建構式回傳物件會被視為整個 `new` 表達式的回傳值
+- 建構函式回傳 primitive value 會被忽略，返回原先建立的物件
+- 建構器會使用大寫字母開頭
+
 #### 使用 apply 與 call 呼叫
-  - 經由函式的 `apply` 或 `call` 方法呼叫：`skulk.call(ninja)` 或 `skulk.apply(ninja)`
-  - 使用 `addEventListener` 瀏覽器事件處理系統會將函式呼叫的背景空間設為目標元素
-  - `apply` 方法使用一個物件作為 `this` 與陣列作為引數
-  - `call` 方法使用一個物件作為 `this` 與多個數值作為引數
-  
+
+- 經由函式的 `apply` 或 `call` 方法呼叫：`skulk.call(ninja)` 或 `skulk.apply(ninja)`
+- 使用 `addEventListener` 瀏覽器事件處理系統會將函式呼叫的背景空間設為目標元素
+- `apply` 方法使用一個物件作為 `this` 與陣列作為引數
+- `call` 方法使用一個物件作為 `this` 與多個數值作為引數
+
 ### 4.3 修復函式背景空間的問題
 
 - 使用箭頭函式繞過函式的背景空間
@@ -51,3 +55,8 @@ tags: ["JS Ninja"]
 - 使用函式 `bind` 會建立並回傳新的函式，`this` 參數始終是設定的物件
 
 ### 4.4 總結
+
+### 補充參考
+
+- [阿福的筆記](https://www.notion.so/Chapter4-3af8d9eafe304ed683e8374eca4505ea)
+- [阿寬的筆記](https://www.coderbridge.com/@waynelee2048/05bf562aae0544989594385ce097b9fb)
