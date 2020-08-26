@@ -47,6 +47,9 @@ https://zh.javascript.info/generators
 
 ## Promise
 
+Using async/await with a forEach loop
+https://stackoverflow.com/questions/37576685/using-async-await-with-a-foreach-loop
+
 ### ref:
 
 - `finally` 使用時機 - https://zh.javascript.info/promise-basics#finally
