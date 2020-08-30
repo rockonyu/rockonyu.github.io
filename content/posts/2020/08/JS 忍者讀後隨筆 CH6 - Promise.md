@@ -1,5 +1,5 @@
 ---
-title: JS 忍者讀後隨筆 CH6
+title: JS 忍者讀後隨筆 CH6 - Promise
 date: "2020-08-09T00:00:00.000Z"
 tags: ["JS Ninja"]
 ---
