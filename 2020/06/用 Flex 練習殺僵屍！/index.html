@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style data-href="/styles.85333577aa7dbfd7b7d3.css">code[class*=language-],pre[class*=language-]{color:#657b83;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{background:#073642}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background-color:#fdf6e3}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#93a1a1}.token.punctuation{color:#586e75}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#268bd2}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string,.token.url{color:#2aa198}.token.entity{color:#657b83;background:#eee8d5}.token.atrule,.token.attr-value,.token.keyword{color:#859900}.token.class-name,.token.function{color:#b58900}.token.important,.token.regex,.token.variable{color:#cb4b16}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style><meta name="generator" content="Gatsby 2.24.2"/><title data-react-helmet="true">用 Flex 練習殺僵屍！ | Austin Chang</title><meta data-react-helmet="true" name="description" content="https://mastery.games/flexboxzombies/ 先放上練習的流水帳，細節之後再整理。 CH1 將元素轉設定為 flex 使用 flex-direction 變更排版方式，預設值為  CH2 使用 justify-content 變更內容的對齊，預設值為  搭配 flex-direction…"/><meta data-react-helmet="true" property="og:title" content="用 Flex 練習殺僵屍！"/><meta data-react-helmet="true" property="og:description" content="https://mastery.games/flexboxzombies/ 先放上練習的流水帳，細節之後再整理。 CH1 將元素轉設定為 flex 使用 flex-direction 變更排版方式，預設值為  CH2 使用 justify-content 變更內容的對齊，預設值為  搭配 flex-direction…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="張瑀"/><meta data-react-helmet="true" name="twitter:title" content="用 Flex 練習殺僵屍！"/><meta data-react-helmet="true" name="twitter:description" content="https://mastery.games/flexboxzombies/ 先放上練習的流水帳，細節之後再整理。 CH1 將元素轉設定為 flex 使用 flex-direction 變更排版方式，預設值為  CH2 使用 justify-content 變更內容的對齊，預設值為  搭配 flex-direction…"/><link rel="icon" href="/favicon-32x32.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=4a9773549091c227cd2eb82ccd9c5e3a"/><link as="script" rel="preload" href="/webpack-runtime-2df9070a04bd454ac19b.js"/><link as="script" rel="preload" href="/framework-a7bb16c5c6afeed647b2.js"/><link as="script" rel="preload" href="/styles-24f8f5af0e19035407c6.js"/><link as="script" rel="preload" href="/app-2352afe71f3c114400c6.js"/><link as="script" rel="preload" href="/847fbb5d7c5ab4bf8f8dd8a705594d026f7b4a76-1d21c05fec1f9e21e2e7.js"/><link as="script" rel="preload" href="/694124f8b8aa51b7b7e53500b2ddd818cbdf8d76-4da23b595129712e5bf3.js"/><link as="script" rel="preload" href="/component---src-templates-posts-tsx-5fdd5bdcc059d92c00e1.js"/><link as="fetch" rel="preload" href="/page-data/2020/06/用 Flex 練習殺僵屍！/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>(function() { try {
+  var mode = localStorage.getItem('theme-ui-color-mode');
+  if (!mode) return
+  document.body.classList.add('theme-ui-' + mode);
+} catch (e) {} })();</script><div id="___gatsby"><style data-emotion-css="qppx7">body{color:var(--theme-ui-colors-text,#202124);background-color:var(--theme-ui-colors-background,#fff);}</style><style data-emotion-css="2vine1">*{box-sizing:border-box;}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,微軟正黑體,sans-serif;line-height:1.5;font-weight:400;}</style><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="8lk4ow">a{color:#0366d6;-webkit-text-decoration:none;text-decoration:none;}a:hover{-webkit-text-decoration:underline;text-decoration:underline;}</style><style data-emotion-css="1bir1y9">.css-1bir1y9{background:#2f393b;mb:1.45rem;}</style><header class="css-1bir1y9"><style data-emotion-css="vehnc6">.css-vehnc6{margin:0 auto;max-width:960px;padding:1.45rem 1.0875rem;}</style><section class="css-vehnc6"><style data-emotion-css="1uk1gs8">.css-1uk1gs8{margin:0;}</style><h1 class="css-1uk1gs8"><style data-emotion-css="1yjgjcc">.css-1yjgjcc{color:white;}.css-1yjgjcc:hover{-webkit-text-decoration:none;text-decoration:none;}</style><a class="css-1yjgjcc" href="/posts">Austin Chang</a><style data-emotion-css="146q31f">.css-146q31f{float:right;}</style><small class="css-146q31f"><a class="css-1yjgjcc" href="/tags">Tags</a></small></h1></section></header><style data-emotion-css="31zgwn">.css-31zgwn{margin:0 auto;max-width:960px;min-height:80vh;padding:0 1rem 1.5rem;}</style><main class="css-31zgwn"><article><header><style data-emotion-css="gx0lhm">.css-gx0lhm{margin-bottom:0;}</style><style data-emotion-css="zm6tvu">.css-zm6tvu{color:var(--theme-ui-colors-text,#202124);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,微軟正黑體,sans-serif;line-height:1.125;font-weight:600;font-size:32px;margin-bottom:0;}</style><h1 class="css-zm6tvu">用 Flex 練習殺僵屍！</h1><p>2020/6/26</p></header><section><p><a href="https://mastery.games/flexboxzombies/">https://mastery.games/flexboxzombies/</a></p>
+<p>先放上練習的流水帳，細節之後再整理。</p>
+<h3>CH1</h3>
+<ol>
+<li>將元素轉設定為 flex</li>
+</ol>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<ol start="2">
+<li>使用 flex-direction 變更排版方式，預設值為 <code class="language-text">row</code></li>
+</ol>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">// 左到右 (預設)
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">// 右到左
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">// 上到下
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">// 下到上
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>CH2</h3>
+<ol>
+<li>使用 justify-content 變更內容的對齊，預設值為 <code class="language-text">flex-start</code></li>
+</ol>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">// 對齊起始點 (預設：左)
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">// 對齊結束點 (右)
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>搭配 flex-direction 可以調整為任何方向，例如：</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">// 對齊右側結束點
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> row-reverse<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">// 對齊上方結束點
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column-reverse<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>另一個範例，將內容對齊中間：</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">// 對齊中間
+crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>將項目填滿整個容器並使用空白隔開 (兩側無空白)</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>項目填滿容器使用空白間隔，並在左右兩側也加上空白</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-around<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>CH3</h3>
+<p>使用 align-items 變更項目側邊的對齊</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>以下範例項目採用下到上的縱向排序並齊左</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column-reverse<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-start<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p><code class="language-text">align-items</code> 擁有 <code class="language-text">stretch</code> 屬性能夠將項目展開，以下屬性表示從左到右排序的項目，且每個項目的均延展至容器的高度</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>使用 <code class="language-text">justify-content</code> 與 <code class="language-text">align-items</code> 排列各種情境。</p>
+<p>Line targets up along the red Justify Laser with <code class="language-text">justify-content</code> and align targets along the blue Alignment Lasers with <code class="language-text">align-items</code></p>
+<p><code class="language-text">align-items</code> 的預設值是 <code class="language-text">stretch</code></p>
+<h3>CH4</h3>
+<p>使用 <code class="language-text">align-self</code> 針對容器內的各別項目重設對齊</p>
+<div class="gatsby-highlight" data-language="css"><pre class="language-css"><code class="language-css"><span class="token selector">crossbow</span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> flex-end<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.target</span> <span class="token punctuation">{</span>
+  <span class="token property">align-self</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>CH5</h3>
+<p>使用 <code class="language-text">flex-grow</code> 標記會隨著容器變寬的項目，預設的值是 <code class="language-text">0</code> 代表不會隨著容器擴張，如設定超過 <code class="language-text">1</code> 則會以相對的倍率擴張。</p>
+<p><code class="language-text">align-items: stretch</code> 指的是項目會延展至副軸的長度。</p>
+<h3>CH6</h3>
+<p><code class="language-text">flex-grow</code> 表示有額外空間時，項目該如何反應
+<code class="language-text">flex-shrink</code> 表示空間不足時，項目該如何反應，預設值是 <code class="language-text">1</code> 代表會隨著容器壓縮，設定為 <code class="language-text">0</code> 代表不壓縮</p>
+<h3>CH7</h3>
+<p><code class="language-text">flex-basis</code> 可以視為是 <code class="language-text">width</code> 或 <code class="language-text">height</code> 的增強，如果同時設定 <code class="language-text">flex-basis</code> 或寬高，後者會被忽略。
+<code class="language-text">flex-basis</code> 在水平的 <code class="language-text">flex-direction</code> 被視為寬，垂直則視為高。</p>
+<p><code class="language-text">flex-basis</code> 會受到 <code class="language-text">min-width</code> 與 <code class="language-text">min-height</code> 影響，最小寬/高度不會低於設定的值。
+<code class="language-text">flex-basis</code> 會受到 <code class="language-text">max-width</code> 與 <code class="language-text">max-height</code> 影響，最大寬/高度不會超過設定的值。</p>
+<p><code class="language-text">flex-basis</code> 無法保證寬度，在外層容器寬度不足，項目會因為 <code class="language-text">flex-shrink</code> 屬性而壓縮。
+<code class="language-text">flex-basis</code> 的預設值是 <code class="language-text">auto</code> 代表該項目會使用 <code class="language-text">width</code> 屬性作其寬度。</p>
+<p>若 <code class="language-text">flex-basis</code> 設定為 <code class="language-text">0</code> 容器會縮減至最小可用的寬度。<a href="https://stackoverflow.com/questions/47578958/the-difference-between-flex-basis-auto-and-0-zero/47579078">範例</a></p>
+<p>When flex-basis is 0, flex-grow ignores the size of the content in flex items and treats all space on the line as free space.</p>
+<h3>CH8</h3>
+<p><code class="language-text">order</code> 屬性用來改變主軸上項目的順序，數字越高離起始點越遠、預設值為 0，設定負數會更接近起始點，
+<code class="language-text">order</code> 無法套用到 nth-of-type 選擇器，因此選擇的項目不會根據 order 有所改變</p>
+<h3>CH9</h3>
+<p><code class="language-text">flex-wrap: wrap</code> 屬性會使項目在容器空間不足時換行。
+<code class="language-text">flex-wrap: wrap-reverse</code> 會將新行建立在項目上方，且同樣會反轉 <code class="language-text">align-items</code> 的設定，例如 <code class="language-text">flex-end</code> 指的是上方。</p>
+<p>wrap firt, shrink second.</p>
+<p><code class="language-text">flex-wrap</code> 的預設值是 <code class="language-text">no-wrap</code>，其他屬性與其互動 (如 <code class="language-text">justify-content</code> 與 <code class="language-text">align-items</code>) 會使用新行作為邊界。</p>
+<h3>CH10</h3>
+<p><code class="language-text">align-content</code> 用來表示在多行 (wrap 時) 項目該如何對齊，預設值是 <code class="language-text">stretch</code> 代表項目會填滿主軸的高，運作起來與 <code class="language-text">align-items</code> 類似：<code class="language-text">flex-start</code> 代表上方，<code class="language-text">flex-end</code> 代表下方。
+<code class="language-text">align-content</code> 也包含了類似 <code class="language-text">justify-content</code> 的 <code class="language-text">space-between</code> 與 <code class="language-text">space-around</code> 屬性。
+<code class="language-text">align-content</code> 對 <code class="language-text">flex-wrap: no-wrap</code> 的容器無效</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content">https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-content</a></p>
+<h3>CH11: Shortcut</h3>
+<p><code class="language-text">flex</code> 屬性可以同時設定 <code class="language-text">flex-grow</code>、<code class="language-text">flex-shrink</code> 與 <code class="language-text">flex-basis</code> 屬性。</p>
+<p><code class="language-text">flex: 1</code> => <code class="language-text">flex: 1 1 0</code>
+<code class="language-text">flex: auto</code> => <code class="language-text">flex: 1 1 auto</code>
+<code class="language-text">flex: none</code> => <code class="language-text">flex: 0 0 auto</code></p>
+<p><code class="language-text">flex-flow</code> 可以同時設定 <code class="language-text">flex-direction</code> 與 <code class="language-text">flex-wrap</code> 屬性。</p>
+<h3>CH12: Review</h3></section><style data-emotion-css="1bb4y59">.css-1bb4y59{box-sizing:border-box;margin:0;min-width:0;color:gray;margin:0;margin-top:8px;margin-bottom:8px;border:0;border-bottom:1px solid;}</style><hr class="css-1bb4y59"/></article><nav><style data-emotion-css="1qfxf3w">.css-1qfxf3w{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;list-style:none;padding:0;}</style><ul class="css-1qfxf3w"><li><a rel="prev" href="/2020/06/優化開發時期 webpack 的編譯速度/">← <!-- -->優化開發時期 webpack 的編譯速度</a></li><li><a rel="next" href="/2020/07/JS 忍者讀後隨筆 CH1 &amp; CH2/">JS 忍者讀後隨筆 CH1 &amp; CH2<!-- --> →</a></li></ul></nav></main><style data-emotion-css="dvm140">.css-dvm140{background-color:#ececec;padding-top:32px;padding-bottom:32px;}</style><footer class="css-dvm140"><style data-emotion-css="15uuv7q">.css-15uuv7q{max-width:960px;margin:0 auto;padding:0 1em;}</style><section class="css-15uuv7q">© <!-- -->2020<!-- -->, Written by <!-- --> <a href="/resume">Austin Chang</a> and built with<!-- --> <a href="https://www.gatsbyjs.org">Gatsby</a></section></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020/06/用 Flex 練習殺僵屍！/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-9af3a556e4297cb2ce64.js"],"app":["/app-2352afe71f3c114400c6.js"],"component---src-pages-404-tsx":["/component---src-pages-404-tsx-1e68e3fb4163c84e509f.js"],"component---src-pages-index-tsx":["/component---src-pages-index-tsx-9bef6a0ea680be5f6d86.js"],"component---src-pages-posts-tsx":["/component---src-pages-posts-tsx-b88131f599e898418acc.js"],"component---src-pages-tags-tsx":["/component---src-pages-tags-tsx-280c92a1dfd628ab2912.js"],"component---src-templates-posts-tsx":["/component---src-templates-posts-tsx-5fdd5bdcc059d92c00e1.js"],"component---src-templates-tags-tsx":["/component---src-templates-tags-tsx-2f9e79174f387bfab5e0.js"]};/*]]>*/</script><script src="/polyfill-9af3a556e4297cb2ce64.js" nomodule=""></script><script src="/component---src-templates-posts-tsx-5fdd5bdcc059d92c00e1.js" async=""></script><script src="/694124f8b8aa51b7b7e53500b2ddd818cbdf8d76-4da23b595129712e5bf3.js" async=""></script><script src="/847fbb5d7c5ab4bf8f8dd8a705594d026f7b4a76-1d21c05fec1f9e21e2e7.js" async=""></script><script src="/app-2352afe71f3c114400c6.js" async=""></script><script src="/styles-24f8f5af0e19035407c6.js" async=""></script><script src="/framework-a7bb16c5c6afeed647b2.js" async=""></script><script src="/webpack-runtime-2df9070a04bd454ac19b.js" async=""></script></body></html>
