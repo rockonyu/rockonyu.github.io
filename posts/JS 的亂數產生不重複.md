@@ -2,6 +2,7 @@
 title: JS 的亂數產生不重複
 published: false
 tags: algorithm
+id: 559264
 ---
 
 前幾天看到一個亂數產生不重複的寫法，覺得很有趣：
