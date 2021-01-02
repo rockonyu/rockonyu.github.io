@@ -1,6 +1,6 @@
 ---
 title: JS 忍者讀後隨筆 CH1 & CH2
-published: true
+published: false
 tags: javascript
 ---
 

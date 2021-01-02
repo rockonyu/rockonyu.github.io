@@ -1,6 +1,6 @@
 ---
 title: JS 忍者讀後隨筆 CH5
-published: true
+published: false
 tags: javascript
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: JS 忍者讀後隨筆 CH7 - 以原型實現物件導向
-published: true
+published: false
 tags: javascript
 ---
 
