@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{"i6+/":function(t,c,e){"use strict";e.r(c);e("q1tI");var o=e("Nhdc"),n=e("qKvR");c.default=function(){return Object(n.c)(o.c,null,Object(n.c)(o.d,{title:"404: Not found"}),Object(n.c)("h1",null,"NOT FOUND"),Object(n.c)("p",null,"You just hit a route that doesn't exist... back to"," ",Object(n.c)("a",{href:"https://rockonyu.github.io"},"Home")))}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-1e68e3fb4163c84e509f.js.map
