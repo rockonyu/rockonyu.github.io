@@ -16,7 +16,7 @@ jobs:
         node-version: 12
 
     - name: Publish to dev.to debug
-      uses: rockonyu/publish-devto@0.1.2
+      uses: rockonyu/publish-devto@0.1.3
       with:
         files: 'posts/**/*.md'
         devto_key: ${{ secrets.DEVTO_TOKEN }}
