@@ -2,9 +2,11 @@
   "name": "austin-blog",
   "version": "0.0.1",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync-devto": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/rockonyu/blog/issues"
   },
-  "homepage": "https://github.com/rockonyu/blog#readme"
+  "homepage": "https://github.com/rockonyu/blog#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/exec": "^1.0.4",
+    "fs-extra": "^9.0.1",
+    "globby": "^11.0.1",
+    "got": "^11.8.1",
+    "gray-matter": "^4.0.2"
+  }
 }
