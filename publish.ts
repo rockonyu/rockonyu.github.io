@@ -1,7 +1,7 @@
-import { getArticlesFromFiles, updateLocalArticle } from './lib/article.js';
-import { updateRemoteArticle } from './lib/devto.js';
-import { getRepositoryFromPackage, updateImagesUrls } from './lib/util.js';
-import { commitAndPushUpdatedArticles } from './lib/git.js';
+import { getArticlesFromFiles, updateLocalArticle } from './lib/article';
+import { updateRemoteArticle } from './lib/devto';
+import { getRepositoryFromPackage, updateImagesUrls } from './lib/util';
+import { commitAndPushUpdatedArticles } from './lib/git';
 
 async function publishArticles(options) {
   try {
@@ -18,18 +18,18 @@ async function publishArticles(options) {
         const newArticle = updateImagesUrls(article, repository);
 
         // TODO: check if need to update before POST/PUT
-        // console.log(matter.stringify(newArticle.content, newArticle.data))
+        console.log({ article });
 
         const result = await updateRemoteArticle(newArticle, options.devtoKey);
 
         // TODO: set status, try/catch here
 
         const localArticle = await updateLocalArticle(article, result);
-        shouldCommit |= localArticle.hasChanged;
+        shouldCommit = shouldCommit || localArticle.hasChanged;
 
         await new Promise((resolve) => {
           setTimeout(() => {
-            resolve();
+            resolve('ok');
           }, 5000);
         });
         // TODO: log results
@@ -43,7 +43,7 @@ async function publishArticles(options) {
         articles,
         repository,
         options.githubToken,
-        options.useConventionalCommits
+        options.useConventionalCommits,
       );
     }
   } catch (error) {

@@ -9,7 +9,7 @@ async function getRemoteArticles(devtoKey) {
       {
         headers: { 'api-key': devtoKey },
         responseType: 'json',
-      }
+      },
     );
     return result.body;
   } catch (error) {
@@ -36,7 +36,7 @@ async function updateRemoteArticle(article, devtoKey) {
         headers: { 'api-key': devtoKey },
         json: { article: { title: article.title, body_markdown: markdown } },
         responseType: 'json',
-      }
+      },
     );
     return result.body;
   } catch (error) {

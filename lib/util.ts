@@ -37,7 +37,7 @@ async function getRepositoryFromPackage() {
     // TODO: search for package file upwards
     const pkg = await fs.readJson('./package.json');
     const repository = parseRepository(
-      (pkg.repository && pkg.repository.url) || pkg.repository
+      (pkg.repository && pkg.repository.url) || pkg.repository,
     );
     if (!repository) {
       throw new Error('No repository property');
@@ -46,7 +46,7 @@ async function getRepositoryFromPackage() {
     return repository;
   } catch (_) {
     throw new Error(
-      `Cannot read repository from package.json.\nMake sure you have a "repository" attribute with your git repository URL.`
+      `Cannot read repository from package.json.\nMake sure you have a "repository" attribute with your git repository URL.`,
     );
   }
 }
@@ -63,7 +63,7 @@ function updateImagesUrls(article, repository) {
     if (imagePath) {
       const fullPath = getFullImagePath(basePath, imagePath);
       const newLink = `![${alt}](${getResourceUrl(
-        repository
+        repository,
       )}${fullPath}${title})`;
       content = content.replace(link, newLink);
     }

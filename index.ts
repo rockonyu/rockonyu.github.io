@@ -1,13 +1,17 @@
-import core from '@actions/core';
-import { publishArticles } from './publish.js';
+import * as core from '@actions/core';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+import { publishArticles } from './publish';
 
 // ref: https://github.com/sinedied/publish-devto
 async function run() {
   try {
     const {
-      FILES: filesGlob,
-      DEVTO_TOKEN: devtoKey,
-      GH_TOKEN: githubToken
+      FILES: filesGlob = '',
+      DEVTO_TOKEN: devtoKey = '',
+      GH_TOKEN: githubToken = '',
     } = process.env;
 
     core.setSecret(devtoKey);
@@ -16,8 +20,8 @@ async function run() {
       JSON.stringify({
         filesGlob,
         devtoKey,
-        githubToken
-      })
+        githubToken,
+      }),
     );
 
     await publishArticles({

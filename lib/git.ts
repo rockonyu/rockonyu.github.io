@@ -4,7 +4,7 @@ import { exec } from '@actions/exec';
 const commitTitle = `Update published articles`;
 const commitName = `dev.to bot`;
 const commitEmail = `sinedied+devtobot@gmail.com`;
-const git = (command, args, flags = []) =>
+const git = (command, args, flags: string[] = []) =>
   exec('git', [...flags, command, ...args]);
 
 const getRepositoryUrl = (repository, githubToken) =>
@@ -14,7 +14,7 @@ async function commitAndPushUpdatedArticles(
   articles,
   repository,
   githubToken,
-  conventional = false
+  conventional = false,
 ) {
   try {
     // TODO: check if master branch
@@ -32,7 +32,7 @@ async function commitAndPushUpdatedArticles(
     await git(
       'commit',
       ['-m', commitMessage],
-      ['-c', `user.name="${commitName}"`, '-c', `user.email="${commitEmail}"`]
+      ['-c', `user.name="${commitName}"`, '-c', `user.email="${commitEmail}"`],
     );
 
     await git('push', [
