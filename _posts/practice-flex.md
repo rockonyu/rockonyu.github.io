@@ -1,8 +1,7 @@
 ---
-title: 用 Flex 練習殺僵屍！
-published: false
+title: Practice Flex
+date: '2020-06-26T00:00:00.000Z'
 tags: css
-id: 559267
 ---
 
 https://mastery.games/flexboxzombies/

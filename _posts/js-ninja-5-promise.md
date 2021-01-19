@@ -1,8 +1,7 @@
 ---
-title: JS 忍者讀後隨筆 CH6 - Promise
-published: false
+title: 'JS Ninja: 5. Promise'
+date: '2020-08-09T00:00:00.000Z'
 tags: javascript
-id: 559260
 ---
 
 簡單的筆記與紀錄額外參考，原作：<a href="https://www.books.com.tw/products/0010701459" target="_blank">忍者：JavaScript  開發技巧探秘</a>

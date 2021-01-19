@@ -1,8 +1,7 @@
 ---
 title: JS 的亂數產生不重複
-published: false
 tags: algorithm
-id: 559264
+# date: '2020-06-22T00:00:00.000Z'
 ---
 
 前幾天看到一個亂數產生不重複的寫法，覺得很有趣：

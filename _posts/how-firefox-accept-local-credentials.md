@@ -1,8 +1,7 @@
 ---
 title: 如何讓 Firefox 接受 .dev 站台的自簽憑證？
-published: false
+# date: '2020-06-19T00:00:00.000Z'
 tags: browser
-id: 559266
 ---
 
 有些站台在開發會使用 HTTPS 連線，一般情況可以略過頁面警告，或是透過自簽憑證讓瀏覽器信任這個連線。
