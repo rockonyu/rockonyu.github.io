@@ -1,4 +1,4 @@
-import { CMS_NAME } from '../lib/constants'
+import { CMS_NAME } from '../lib/constants';
 
 const Intro = () => {
   return (
@@ -6,7 +6,7 @@ const Intro = () => {
       <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Blog.
       </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
+      {/* <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
         A statically generated blog example using{' '}
         <a
           href="https://nextjs.org/"
@@ -15,9 +15,9 @@ const Intro = () => {
           Next.js
         </a>{' '}
         and {CMS_NAME}.
-      </h4>
+      </h4> */}
     </section>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

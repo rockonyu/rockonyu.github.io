@@ -1,6 +1,6 @@
 {
-  "name": "blog-starter-typescript",
-  "version": "1.0.0",
+  "name": "rockonyu.github.io",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
