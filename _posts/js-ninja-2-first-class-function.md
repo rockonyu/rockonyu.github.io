@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 2. First-Class Function'
-date: '2020-07-11T00:00:00.000Z'
+# date: '2020-07-11T00:00:00.000Z'
 tags: javascript
 ---
 

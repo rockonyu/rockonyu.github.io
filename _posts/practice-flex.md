@@ -1,6 +1,6 @@
 ---
 title: Practice Flex
-date: '2020-06-26T00:00:00.000Z'
+# date: '2020-06-26T00:00:00.000Z'
 tags: css
 ---
 

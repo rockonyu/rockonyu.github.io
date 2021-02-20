@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 4. Closure'
-date: '2020-07-27T00:00:00.000Z'
+# date: '2020-07-27T00:00:00.000Z'
 tags: javascript
 ---
 
