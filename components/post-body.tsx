@@ -11,7 +11,7 @@ type Props = {
 const PostBody = ({ content }: Props) => {
   useEffect(() => {
     document.querySelectorAll<HTMLElement>('pre code').forEach((block) => {
-      hljs.highlightBlock(block)
+      hljs.highlightElement(block)
     })
   }, [])
   return (
