@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 5. Promise'
-# date: '2020-08-09T00:00:00.000Z'
+date: '2020-08-09T00:00:00.000Z'
 tags: javascript
 ---
 

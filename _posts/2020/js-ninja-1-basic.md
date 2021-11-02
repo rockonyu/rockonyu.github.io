@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 1. Basic'
-# date: '2020-07-05T00:00:00.000Z'
+date: '2020-07-05T00:00:00.000Z'
 tags: javascript
 ---
 

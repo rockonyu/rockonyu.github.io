@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 2. First-Class Function'
-# date: '2020-07-11T00:00:00.000Z'
+date: '2020-07-11T00:00:00.000Z'
 tags: javascript
 ---
 
@@ -27,11 +27,11 @@ JavaScript  最重要的特性之一是能夠在程式的任何地方建立函�
 ex. 使用比對器進行排序，不需要考慮排序演算法的細節：
 
 ```javascript
-var values = [0, 3, 2, 5, 7, 4, 8, 1];
+var values = [0, 3, 2, 5, 7, 4, 8, 1]
 
 values.sort(function (values, values) {
-  return value1 - value2;
-});
+  return value1 - value2
+})
 ```
 
 ### 3.2 函式作為物件的有趣之處
@@ -46,16 +46,16 @@ var store = {
   cache: {},
   add: function (fn) {
     if (!fn.id) {
-      fn.id = this.nextId++;
-      this.cache[fn.id] = fn;
-      return true;
+      fn.id = this.nextId++
+      this.cache[fn.id] = fn
+      return true
     }
   },
-};
+}
 function ninja() {}
 
-assert(store.add(ninja), 'Function was safely added.');
-assert(!store.add(ninja), 'But it was only added once.');
+assert(store.add(ninja), 'Function was safely added.')
+assert(!store.add(ninja), 'But it was only added once.')
 ```
 
 - 自我記憶函式
@@ -63,22 +63,22 @@ assert(!store.add(ninja), 'But it was only added once.');
 ```javascript
 function isPrime(value) {
   if (!isPrime.answers) {
-    isPrime.answers = {};
+    isPrime.answers = {}
   }
 
   if (isPrime.answers[value] !== undefined) {
-    return isPrime.answers[value];
+    return isPrime.answers[value]
   }
 
-  var prime = value !== 0 && value !== 1;
+  var prime = value !== 0 && value !== 1
 
   for (var i = 2; i < value; i++) {
     if (value % i === 0) {
-      prime = false;
-      break;
+      prime = false
+      break
     }
   }
-  return (isPrime.answers[value] = prime); // 儲存計算結果
+  return (isPrime.answers[value] = prime) // 儲存計算結果
 }
 ```
 
@@ -108,27 +108,27 @@ function myFunctionDeclaration() {
 }
 
 // 函式表達式與變數宣告 & 指派
-var myFunc = function () {};
+var myFunc = function () {}
 // 函式表達式作為回呼引數
 myFunc(function () {
   // 函式表達式作為回傳值
-  return function () {};
-});
+  return function () {}
+})
 
 // 具名的函式表達式做為立即函式的一部分
-(function namedFunctionExpression() {})();
+;(function namedFunctionExpression() {})()
 
 // 作為一元運作子的引數而被立即呼叫的函式表達式
-+(function () {})();
--(function () {})();
-!(function () {})();
-~(function () {})();
+;+(function () {})()
+;-(function () {})()
+!(function () {})()
+~(function () {})()
 ```
 
 立即函式 (IIFE)
 
 ```javascript
-(function () {})(3);
+;(function () {})(3)
 ```
 
 箭頭函式
@@ -138,8 +138,8 @@ myFunc(function () {
 - 如果沒有 return 敘述句，呼叫的結果是 undefined
 
 ```javascript
-var values = [0, 3, 2, 5, 7, 4, 8, 1];
-values.sort((value1, value2) => value1 - value2);
+var values = [0, 3, 2, 5, 7, 4, 8, 1]
+values.sort((value1, value2) => value1 - value2)
 ```
 
 ### 3.4 引數 (argument) 與函式參數 (parameter)
@@ -148,7 +148,7 @@ values.sort((value1, value2) => value1 - value2);
 // 函式參數
 function skulk(ninja) {
   // 函式引數
-  return performAction(ninja, 'skulking');
+  return performAction(ninja, 'skulking')
 }
 ```
 
@@ -159,9 +159,9 @@ function skulk(ninja) {
 ```javascript
 function multiMax(first, ...remainingNumbers) {
   var sorted = remainingNumbers.sort(function (a, b) {
-    return b - a;
-  });
-  return first * sorted[0];
+    return b - a
+  })
+  return first * sorted[0]
 }
 ```
 
@@ -169,7 +169,7 @@ function multiMax(first, ...remainingNumbers) {
 
 ```javascript
 function performAction(ninja, action = 'skulking') {
-  return ninja + ' ' + action;
+  return ninja + ' ' + action
 }
 ```
 

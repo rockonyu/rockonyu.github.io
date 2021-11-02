@@ -1,6 +1,6 @@
 ---
 title: 'JS Ninja: 3. Function Call'
-# date: '2020-07-12T00:00:00.000Z'
+date: '2020-07-12T00:00:00.000Z'
 tags: javascript
 ---
 
