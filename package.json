@@ -6,7 +6,8 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "prettier": "prettier --write '**/*.tsx'"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -32,6 +33,7 @@
     "glob": "^7.2.0",
     "postcss": "^8.3.11",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
     "tailwindcss": "^2.0.2"
   },
   "license": "MIT"
