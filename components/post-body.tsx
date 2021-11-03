@@ -1,6 +1,6 @@
 import markdownStyles from './markdown-styles.module.css'
 import classnames from 'classnames'
-import 'highlight.js/styles/github.css'
+import 'highlight.js/styles/github-dark-dimmed.css'
 
 type Props = {
   content: string
