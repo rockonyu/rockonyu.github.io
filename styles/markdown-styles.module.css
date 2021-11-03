@@ -9,10 +9,24 @@
   @apply my-6;
 }
 
+.markdown ol {
+  @apply list-disc ml-4;
+}
+.markdown li {
+  @apply mb-2;
+}
+
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
-
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown a {
+  @apply underline hover:text-success duration-200 transition-colors;
+}
+
+.markdown code {
+  @apply text-sm text-gray-200 bg-gray-800 py-1 px-2 rounded;
 }
