@@ -1,8 +1,8 @@
-import Avatar from './avatar'
-import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
-import PostTitle from './post-title'
-import Author from '../types/author'
+import Avatar from 'components/Avatar'
+import DateFormatter from 'components/DateFormatter'
+import CoverImage from 'components/CoverImage'
+import PostTitle from './PostTitle'
+import Author from 'types/author'
 
 type Props = {
   title: string
