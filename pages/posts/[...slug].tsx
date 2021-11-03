@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
@@ -20,9 +21,19 @@ type Props = {
 
 const Post = ({ post, morePosts, preview }: Props) => {
   const router = useRouter()
+
+  useEffect(() => {
+    var d = document,
+      s = d.createElement('script')
+    s.src = 'https://rockonyu-blog.disqus.com/embed.js'
+    s.setAttribute('data-timestamp', `${+new Date()}`)
+    ;(d.head || d.body).appendChild(s)
+  }, [])
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
   return (
     <Layout preview={preview}>
       <Container>
@@ -31,7 +42,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="mb-16">
               <Head>
                 <title>{post.title} | Austin's Blog</title>
                 <meta property="og:image" content={post.ogImage?.url} />
@@ -42,7 +53,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody
+                content={post.content}
+                comment={<div id="disqus_thread"></div>}
+              />
             </article>
           </>
         )}
