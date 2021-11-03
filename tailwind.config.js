@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: 'media',
   purge: ['./components/**/*.tsx', './pages/**/*.tsx'],
   theme: {
     extend: {
@@ -6,6 +7,8 @@ module.exports = {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
         'accent-7': '#333',
+        'accent-8': '#222426',
+        'accent-9': '#1e2122',
         success: '#0070f3',
         cyan: '#79FFE1',
       },
