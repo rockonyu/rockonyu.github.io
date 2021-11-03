@@ -36,7 +36,7 @@ const HeroPost = ({
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+            {date && <DateFormatter dateString={date} />}
           </div>
         </div>
         {author && (
