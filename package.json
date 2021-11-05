@@ -10,6 +10,7 @@
     "prettier": "prettier --write '**/*.tsx'"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "classnames": "2.2.6",
     "date-fns": "2.25.0",
     "gray-matter": "4.0.3",
@@ -17,7 +18,9 @@
     "next": "12.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "rehype-autolink-headings": "^6.1.0",
     "rehype-highlight": "^5.0.0",
+    "rehype-slug": "^5.0.0",
     "rehype-stringify": "^9.0.2",
     "remark-parse": "^10.0.0",
     "remark-rehype": "^10.0.0",

@@ -1,8 +1,10 @@
+import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeHighlight from 'rehype-highlight'
 import rehypeStringify from 'rehype-stringify'
-import { unified } from 'unified'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 export default async function markdownToHtml(markdown: string) {
   const result = await unified()
@@ -12,6 +14,17 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkRehype)
     // rehype plugin to highlight the syntax of code with lowlight
     .use(rehypeHighlight)
+    // 針對 h1 ~ h6 元素加入 id
+    .use(rehypeSlug)
+    // 針對 h1 ~ h6 元素加入錨點
+    .use(rehypeAutolinkHeadings, {
+      content: {
+        type: 'element',
+        tagName: 'span',
+        properties: { className: ['fas', 'fa-link', 'fa-xs'] },
+        children: [],
+      },
+    })
     // rehype plugin to serialize HTML, compiler for unified.
     .use(rehypeStringify)
     .process(markdown)
