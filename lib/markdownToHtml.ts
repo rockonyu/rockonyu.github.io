@@ -18,11 +18,12 @@ export default async function markdownToHtml(markdown: string) {
     .use(rehypeSlug)
     // 針對 h1 ~ h6 元素加入錨點
     .use(rehypeAutolinkHeadings, {
+      behavior: 'append',
       content: {
         type: 'element',
         tagName: 'span',
-        properties: { className: ['fas', 'fa-link', 'fa-xs'] },
-        children: [],
+        properties: { className: ['ml-2'] },
+        children: [{ type: 'text', value: '#' }],
       },
     })
     // rehype plugin to serialize HTML, compiler for unified.
