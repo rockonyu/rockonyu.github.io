@@ -22,7 +22,6 @@ export default async function markdownToHtml(markdown: string) {
       content: {
         type: 'element',
         tagName: 'span',
-        properties: { className: ['ml-2'] },
         children: [{ type: 'text', value: '#' }],
       },
     })

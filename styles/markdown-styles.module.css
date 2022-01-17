@@ -29,7 +29,7 @@
 .markdown h4 > a,
 .markdown h5 > a,
 .markdown h6 > a {
-  @apply mr-3;
+  @apply ml-3;
 }
 
 .markdown a {
