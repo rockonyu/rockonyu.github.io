@@ -40,4 +40,6 @@ https://www.nordtheme.com/docs/ports/visual-studio-code/installation
 1. Preferences > Themes > Colors
 2. 複製並貼上以下代碼
 
-`#2E3440,#3B4252,#88C0D0,#2E3440,#3B4252,#D8DEE9,#A3BE8C,#81A1C1`
+```
+#2E3440,#3B4252,#88C0D0,#2E3440,#3B4252,#D8DEE9,#A3BE8C,#81A1C1
+```
