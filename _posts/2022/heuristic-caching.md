@@ -39,3 +39,7 @@ date: '2022-11-04T08:03:33Z'
 
 1. Etag、Last Modified 需要與 Cache-Control 搭配使用
 2. 僅有 Last Modified 與 Date 會進入 heuristic caching，由瀏覽器決定快取時間
+
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#heuristic_caching
+- https://blog.techbridge.cc/2017/06/17/cache-introduction/
+- https://www.kabisa.nl/tech/http-caching-gotcha-heuristic-freshness/
