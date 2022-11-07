@@ -43,3 +43,4 @@ date: '2022-11-04T08:03:33Z'
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#heuristic_caching
 - https://blog.techbridge.cc/2017/06/17/cache-introduction/
 - https://www.kabisa.nl/tech/http-caching-gotcha-heuristic-freshness/
+- https://blog.csdn.net/qq_34556414/article/details/106337292
