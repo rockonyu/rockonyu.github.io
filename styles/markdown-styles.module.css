@@ -16,6 +16,9 @@
   @apply mb-2;
 }
 
+.markdown h1 {
+  @apply text-4xl mt-12 mb-4 leading-snug;
+}
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
@@ -38,4 +41,8 @@
 
 .markdown code {
   @apply text-sm text-gray-200 bg-gray-800 py-1 px-2 rounded;
+}
+
+.markdown blockquote {
+  @apply pl-4 border-l-4 border-gray-200;
 }
